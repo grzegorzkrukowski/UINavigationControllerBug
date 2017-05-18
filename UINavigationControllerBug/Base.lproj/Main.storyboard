@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lOj-4O-ekd">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="64R-5c-5rD">
+            <objects>
+                <navigationController id="lOj-4O-ekd" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uyx-Zy-Hm3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="0Li-fg-wNW" kind="relationship" relationship="rootViewController" id="6lV-W0-GyF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DMG-1B-Hji" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-913" y="17"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="7cj-GG-J4q">
+            <objects>
+                <viewController id="0Li-fg-wNW" customClass="ViewController" customModule="UINavigationControllerBug" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FdI-ji-meG"/>
+                        <viewControllerLayoutGuide type="bottom" id="MfS-Vf-uHN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HlM-GR-6lD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yow-kP-JTP">
+                                <rect key="frame" x="171" y="318" width="32" height="30"/>
+                                <state key="normal" title="BUG"/>
+                                <connections>
+                                    <action selector="bugMe:" destination="0Li-fg-wNW" eventType="touchUpInside" id="A80-oU-Rj1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Yow-kP-JTP" firstAttribute="centerX" secondItem="HlM-GR-6lD" secondAttribute="centerX" id="61b-F7-5A5"/>
+                            <constraint firstItem="Yow-kP-JTP" firstAttribute="centerY" secondItem="HlM-GR-6lD" secondAttribute="centerY" id="aq1-TR-TDC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="0xR-hh-paL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b91-5B-6vO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-113" y="6"/>
+        </scene>
+    </scenes>
+</document>
